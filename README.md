@@ -1,2 +1,4 @@
-# cpp-debug
-Build/Run/Debug C++ File with Codespaces
+# CISC230 Week 12 Examples
+
+- The Knapsack Problem
+- Tug-Of-War
