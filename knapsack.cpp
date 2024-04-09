@@ -1,10 +1,11 @@
 #include "knapsack.h"
 #include <iostream>
+#include <vector>
 using namespace std;
 
 int main () {
 
-	list<Item> items;
+	vector<Item> items;
 	items.push_back(Item(12, 4));
 	items.push_back(Item(2, 2));
 	items.push_back(Item(1, 2));
