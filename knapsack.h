@@ -27,32 +27,24 @@ class Knapsack {
 protected:
 	int cap, val, wgt;
 	std::list<Item> itms;
-	// Add an item to the knapsack, throws exception if item exceeds capacity
-	void add (const Item& itm);
-	// Remove an item from the knapsack, throws exception if item not found
-	void remove (const Item& itm);
 public:
 	// Knapsack requires capacity for initialization
-	Knapsack (int c, std::list<Item> candidates);
+	Knapsack (int c);
 	// Accessor functions
 	int capacity () const { return cap; }
 	int value () const { return val; }
 	int weight () const { return wgt; }
 	const std::list<Item>& items () const { return itms; }
+	// Add an item to the knapsack, throws exception if item exceeds capacity
+	void add (const Item& itm);
+	// Remove an item from the knapsack, throws exception if item not found
+	void remove (const Item& itm);
 };
 
-Knapsack::Knapsack (int c, std::list<Item> candidates) {
+Knapsack::Knapsack (int c) {
 	// Initialize capacity, value, and weight
 	cap = c;
 	val = wgt = 0;
-	// Starter code, place items from candidates one-by-one, and include each
-	// in the knapsack if it fits.
-	for (auto item: candidates) {
-		try {
-			add(item);
-		}
-		catch (int error) { }
-	}
 }
 
 void Knapsack::add (const Item& itm) {

@@ -16,7 +16,7 @@ int main () {
 		cout << item;
 	cout << endl;
 
-	Knapsack knap(15, items);
+	Knapsack knap(15);
 
 	cout << "Knapsack items: ";
 	cout << knap << endl;
